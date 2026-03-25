@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bo Wen – Software Engineer</title>
   <style>
     /* ── Reset & Variables ─────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --bg: #0a0e1a;
@@ -24,7 +31,10 @@
       --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
     body {
       background: var(--bg);
@@ -45,7 +55,9 @@
     /* ── Navigation ────────────────────────────────────── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: var(--nav-h);
       background: rgba(10, 14, 26, 0.85);
       backdrop-filter: blur(16px);
@@ -89,15 +101,22 @@
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -4px; left: 0;
-      width: 0; height: 2px;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
       background: var(--accent);
       border-radius: 2px;
       transition: width var(--transition);
     }
 
-    .nav-links a:hover { color: var(--accent); }
-    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
     /* ── Sections ──────────────────────────────────────── */
     section {
@@ -153,15 +172,25 @@
     }
 
     .hero-badge-dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       background: var(--accent3);
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.3); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.3);
+      }
     }
 
     .hero-name {
@@ -249,7 +278,10 @@
       flex-wrap: wrap;
     }
 
-    .stat-item { display: flex; flex-direction: column; }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
 
     .stat-num {
       font-size: 2.25rem;
@@ -266,10 +298,18 @@
       background-clip: text;
     }
 
-    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
 
     /* ── Skills ────────────────────────────────────────── */
-    #skills { padding-top: 2rem; }
+    #skills {
+      padding-top: 2rem;
+    }
 
     .skills-grid {
       display: grid;
@@ -290,7 +330,9 @@
     .skill-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 2px;
       background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
       transform: scaleX(0);
@@ -301,10 +343,12 @@
     .skill-card:hover {
       border-color: rgba(56, 189, 248, 0.3);
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .skill-card:hover::before { transform: scaleX(1); }
+    .skill-card:hover::before {
+      transform: scaleX(1);
+    }
 
     .skill-card-icon {
       font-size: 2rem;
@@ -344,13 +388,16 @@
     }
 
     /* ── Experience ────────────────────────────────────── */
-    .timeline { position: relative; }
+    .timeline {
+      position: relative;
+    }
 
     .timeline::before {
       content: '';
       position: absolute;
       left: 20px;
-      top: 0; bottom: 0;
+      top: 0;
+      bottom: 0;
       width: 1px;
       background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 50%, var(--accent3) 100%);
       opacity: 0.3;
@@ -366,7 +413,8 @@
       position: absolute;
       left: 12px;
       top: 6px;
-      width: 18px; height: 18px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: var(--surface);
       border: 2px solid var(--accent);
@@ -390,7 +438,7 @@
 
     .exp-card:hover {
       border-color: rgba(56, 189, 248, 0.3);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     }
 
     .exp-header {
@@ -455,7 +503,8 @@
     }
 
     .company-logo {
-      width: 24px; height: 24px;
+      width: 24px;
+      height: 24px;
       border-radius: 6px;
       display: inline-flex;
       align-items: center;
@@ -465,10 +514,25 @@
       letter-spacing: -0.5px;
     }
 
-    .logo-tiktok { background: linear-gradient(135deg, #010101, #ee1d52); color: white; }
-    .logo-citi   { background: linear-gradient(135deg, #003e7e, #0073cf); color: white; }
-    .logo-meta   { background: linear-gradient(135deg, #0082fb, #0196ff); color: white; }
-    .logo-gartner { background: linear-gradient(135deg, #1b4d97, #3b7ac4); color: white; }
+    .logo-tiktok {
+      background: linear-gradient(135deg, #010101, #ee1d52);
+      color: white;
+    }
+
+    .logo-citi {
+      background: linear-gradient(135deg, #003e7e, #0073cf);
+      color: white;
+    }
+
+    .logo-meta {
+      background: linear-gradient(135deg, #0082fb, #0196ff);
+      color: white;
+    }
+
+    .logo-gartner {
+      background: linear-gradient(135deg, #1b4d97, #3b7ac4);
+      color: white;
+    }
 
     /* ── Education ─────────────────────────────────────── */
     .edu-grid {
@@ -490,7 +554,8 @@
     .edu-card::after {
       content: '🎓';
       position: absolute;
-      right: 1.5rem; top: 1.5rem;
+      right: 1.5rem;
+      top: 1.5rem;
       font-size: 2rem;
       opacity: 0.15;
       transition: opacity var(--transition);
@@ -499,10 +564,12 @@
     .edu-card:hover {
       border-color: rgba(129, 140, 248, 0.4);
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     }
 
-    .edu-card:hover::after { opacity: 0.3; }
+    .edu-card:hover::after {
+      opacity: 0.3;
+    }
 
     .edu-degree {
       font-size: 1.05rem;
@@ -539,9 +606,11 @@
 
     .contact-glow {
       position: absolute;
-      width: 400px; height: 400px;
+      width: 400px;
+      height: 400px;
       background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
-      top: 50%; left: 50%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       pointer-events: none;
     }
@@ -576,6 +645,125 @@
       box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
     }
 
+    /* ── Schedule ──────────────────────────────────────── */
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .schedule-grid .full-width { grid-column: 1 / -1; }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .form-group label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+    }
+
+    .form-group input[type="date"]::-webkit-calendar-picker-indicator,
+    .form-group input[type="time"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.6);
+      cursor: pointer;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 90px; }
+
+    .form-group select option { background: var(--surface2); }
+
+    .schedule-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      transition: all var(--transition);
+    }
+
+    #schedule-status {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.85rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    #schedule-status.success {
+      display: block;
+      background: rgba(52, 211, 153, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: var(--accent3);
+    }
+
+    #schedule-status.error {
+      display: block;
+      background: rgba(248, 113, 113, 0.1);
+      border: 1px solid rgba(248, 113, 113, 0.3);
+      color: #f87171;
+    }
+
+    .schedule-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.875rem;
+    }
+
+    .info-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .info-label { font-size: 0.75rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .info-value { font-size: 0.9rem; color: var(--text); }
+
+    .schedule-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .schedule-layout { grid-template-columns: 1fr; }
+      .schedule-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── Footer ────────────────────────────────────────── */
     footer {
       text-align: center;
@@ -599,395 +787,601 @@
       transform: translateY(0);
     }
 
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
 
     /* ── Keyframes ─────────────────────────────────────── */
     @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-16px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* ── Scrollbar ─────────────────────────────────────── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent);
+    }
 
     /* ── Mobile ────────────────────────────────────────── */
     @media (max-width: 640px) {
-      .nav-links { gap: 1.25rem; }
-      .hero-stats { gap: 2rem; }
-      .timeline::before { left: 14px; }
-      .exp-item { padding-left: 50px; }
-      .exp-dot { left: 6px; }
+      .nav-links {
+        gap: 1.25rem;
+      }
+
+      .hero-stats {
+        gap: 2rem;
+      }
+
+      .timeline::before {
+        left: 14px;
+      }
+
+      .exp-item {
+        padding-left: 50px;
+      }
+
+      .exp-dot {
+        left: 6px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<canvas id="bg-canvas"></canvas>
+  <canvas id="bg-canvas"></canvas>
 
-<!-- Navigation -->
-<nav id="navbar">
-  <div class="nav-logo">Bo Wen</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">Bo Wen</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- Hero -->
-<section id="about">
-  <h1 class="hero-name">Bo <span>Wen</span></h1>
-  <p class="hero-title">Software Engineer · Distributed Systems · Full-Stack</p>
-  <p class="hero-desc">
-    Building infrastructure at scale — from datacenter supply chains at TikTok to
-    creator analytics at Meta. I design distributed systems that move fast and don't break things.
-  </p>
-  <div class="hero-cta">
-    <a href="#experience" class="btn btn-primary">View Experience ↓</a>
-    <a href="#contact" class="btn btn-outline">Get in Touch</a>
-  </div>
-  <div class="hero-stats">
-    <div class="stat-item">
-      <span class="stat-num"><span>7</span>+</span>
-      <span class="stat-label">Years Experience</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num"><span>4</span></span>
-      <span class="stat-label">Top-tier Companies</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num"><span>50K</span>+</span>
-      <span class="stat-label">Logs/sec Processed</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num"><span>80</span>%</span>
-      <span class="stat-label">Migration Efficiency Gain</span>
-    </div>
-  </div>
-</section>
-
-<!-- Skills -->
-<section id="skills">
-  <div class="section-label">What I Work With</div>
-  <h2 class="section-title">Technical Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card reveal">
-      <div class="skill-card-icon">⚡</div>
-      <div class="skill-card-title">Languages</div>
-      <div class="skill-tags">
-        <span class="tag">Go</span>
-        <span class="tag">Java</span>
-        <span class="tag">Python</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">C++</span>
-      </div>
-    </div>
-    <div class="skill-card reveal reveal-delay-1">
-      <div class="skill-card-icon">🏗️</div>
-      <div class="skill-card-title">Backend & Infra</div>
-      <div class="skill-tags">
-        <span class="tag">Kafka</span>
-        <span class="tag">Redis</span>
-        <span class="tag">Elasticsearch</span>
-        <span class="tag">Docker</span>
-        <span class="tag">gRPC</span>
-        <span class="tag">Spring Boot</span>
-        <span class="tag">REST APIs</span>
-        <span class="tag">GraphQL</span>
-      </div>
-    </div>
-    <div class="skill-card reveal reveal-delay-2">
-      <div class="skill-card-icon">☁️</div>
-      <div class="skill-card-title">Cloud & Data</div>
-      <div class="skill-tags">
-        <span class="tag">AWS</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">NoSQL</span>
-        <span class="tag">Apache Spark</span>
-        <span class="tag">Hive</span>
-        <span class="tag">Presto</span>
-      </div>
-    </div>
-    <div class="skill-card reveal reveal-delay-3">
-      <div class="skill-card-icon">🤖</div>
-      <div class="skill-card-title">AI / Frontend</div>
-      <div class="skill-tags">
-        <span class="tag">RAG</span>
-        <span class="tag">MCP</span>
-        <span class="tag">LLM</span>
-        <span class="tag">React</span>
-        <span class="tag">Git</span>
-        <span class="tag">Distributed Systems</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Experience -->
-<section id="experience">
-  <div class="section-label">Where I've Worked</div>
-  <h2 class="section-title">Professional Experience</h2>
-  <div class="timeline">
-
-    <!-- TikTok -->
-    <div class="exp-item reveal">
-      <div class="exp-dot"></div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-company-badge">
-            <span class="company-logo logo-tiktok">TT</span>
-            <span class="exp-company">TikTok</span>
-            <span style="color:var(--muted);font-size:0.85rem;margin-left:0.25rem">· NYC</span>
-          </div>
-          <span class="exp-period">Dec 2023 – Present</span>
-        </div>
-        <div class="exp-role">Software Engineer – Infra Platforms</div>
-        <ul class="exp-bullets">
-          <li>Architected and enhanced TikTok's datacenter infrastructure &amp; supply chain management platforms, powering global planning, procurement, and sourcing workflows using Golang, Java, MySQL, Kafka, Redis, and Elasticsearch.</li>
-          <li>Designed a high-throughput distributed monitoring system processing <strong>50K+ logs/sec</strong> using Kafka and Go goroutines with worker pools and backpressure mechanisms.</li>
-          <li>Led full-stack mobile procurement platform for senior leadership with React + Golang; integrated SSO &amp; JWT auth — <strong>60% productivity boost</strong>.</li>
-          <li>Built CDC pipelines (RDS binlog → Kafka → Protobuf) enabling zero-downtime cutovers and boosting data migration efficiency by <strong>80%</strong>.</li>
-          <li>Applied LLM techniques (RAG, MCP) to accelerate engineering workflows and developer productivity across teams.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Citibank -->
-    <div class="exp-item reveal reveal-delay-1">
-      <div class="exp-dot"></div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-company-badge">
-            <span class="company-logo logo-citi">C</span>
-            <span class="exp-company">Citibank</span>
-            <span style="color:var(--muted);font-size:0.85rem;margin-left:0.25rem">· NYC</span>
-          </div>
-          <span class="exp-period">Feb 2023 – Dec 2023</span>
-        </div>
-        <div class="exp-role">Senior Java Engineer</div>
-        <ul class="exp-bullets">
-          <li>Developed backend services and frontend features for internal auditing systems using Java and Spring Boot, improving system maintainability and reliability at scale.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Meta -->
-    <div class="exp-item reveal reveal-delay-2">
-      <div class="exp-dot"></div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-company-badge">
-            <span class="company-logo logo-meta">M</span>
-            <span class="exp-company">Meta</span>
-            <span style="color:var(--muted);font-size:0.85rem;margin-left:0.25rem">· NYC</span>
-          </div>
-          <span class="exp-period">May 2022 – Feb 2023</span>
-        </div>
-        <div class="exp-role">Software Engineer</div>
-        <ul class="exp-bullets">
-          <li>Led feature development on Meta Business Suite — <strong>50% improvement</strong> in creator acquisition through enhanced UX and platform performance.</li>
-          <li>Designed and built the Reels Insights GraphAPI with React, Relay, GraphQL, and Ent Framework; enabling 3rd-party developer access to advanced analytics.</li>
-          <li>Built executive-facing Reels Insights API monitoring dashboards using Hive, Apache Spark, Presto, and Scuba to surface usage patterns for leadership.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Gartner -->
-    <div class="exp-item reveal reveal-delay-3">
-      <div class="exp-dot"></div>
-      <div class="exp-card">
-        <div class="exp-header">
-          <div class="exp-company-badge">
-            <span class="company-logo logo-gartner">G</span>
-            <span class="exp-company">Gartner</span>
-            <span style="color:var(--muted);font-size:0.85rem;margin-left:0.25rem">· Stamford</span>
-          </div>
-          <span class="exp-period">Sep 2019 – Apr 2022</span>
-        </div>
-        <div class="exp-role">Software Engineer</div>
-        <ul class="exp-bullets">
-          <li>Architected an advanced user tracking and analytics tool with Elasticsearch — <strong>60% improvement</strong> in backend response performance.</li>
-          <li>Led backend design for LinkedIn API integration via OAuth 2.0, enabling automated posting and dramatically improving social media platform recognition.</li>
-          <li>Designed and implemented AWS Lambda functions, enhancing backend efficiency and reducing endpoint latency.</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Education -->
-<section id="education">
-  <div class="section-label">Academic Background</div>
-  <h2 class="section-title">Education</h2>
-  <div class="edu-grid">
-    <div class="edu-card reveal">
-      <div class="edu-degree">M.S. in Computer Science</div>
-      <div class="edu-school">University of Minnesota</div>
-      <div class="edu-period">Aug 2017 – Jul 2019</div>
-    </div>
-    <div class="edu-card reveal reveal-delay-1">
-      <div class="edu-degree">B.S. in Computer Science</div>
-      <div class="edu-school">University of Minnesota</div>
-      <div class="edu-period">Aug 2014 – Dec 2016</div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <div class="section-label">Let's Connect</div>
-  <h2 class="section-title" style="margin-bottom:0">Get in Touch</h2>
-  <div class="contact-card reveal" style="margin-top:2rem">
-    <div class="contact-glow"></div>
-    <p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto">
-      I'm always open to discussing distributed systems, infrastructure at scale, or new opportunities.
+  <!-- Hero -->
+  <section id="about">
+    <h1 class="hero-name">Bo <span>Wen</span></h1>
+    <p class="hero-title">Software Engineer · Distributed Systems · Full-Stack</p>
+    <p class="hero-desc">
+      Building infrastructure at scale — from datacenter supply chains at TikTok to
+      creator analytics at Meta. I design distributed systems that move fast and don't break things.
     </p>
-    <div class="contact-links">
-      <a href="mailto:bowen4091761@gmail.com" class="contact-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        bowen4091761@gmail.com
-      </a>
-      <a href="tel:218-409-1761" class="contact-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-        218-409-1761
-      </a>
+    <div class="hero-cta">
+      <a href="#experience" class="btn btn-primary">View Experience ↓</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
     </div>
-  </div>
-</section>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num"><span>7</span>+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num"><span>4</span></span>
+        <span class="stat-label">Top-tier Companies</span>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2026 Bo Wen · Built with care and a little 🔥</p>
-</footer>
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-label">What I Work With</div>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">⚡</div>
+        <div class="skill-card-title">Languages</div>
+        <div class="skill-tags">
+          <span class="tag">Go</span>
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">C++</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon">🏗️</div>
+        <div class="skill-card-title">Backend & Infra</div>
+        <div class="skill-tags">
+          <span class="tag">Kafka</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Elasticsearch</span>
+          <span class="tag">Docker</span>
+          <span class="tag">gRPC</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">GraphQL</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon">☁️</div>
+        <div class="skill-card-title">Cloud & Data</div>
+        <div class="skill-tags">
+          <span class="tag">AWS</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">NoSQL</span>
+          <span class="tag">Apache Spark</span>
+          <span class="tag">Hive</span>
+          <span class="tag">Presto</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-card-icon">🤖</div>
+        <div class="skill-card-title">AI / Frontend</div>
+        <div class="skill-tags">
+          <span class="tag">RAG</span>
+          <span class="tag">MCP</span>
+          <span class="tag">LLM</span>
+          <span class="tag">React</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-  /* ── Particle Canvas ────────────────────────────────── */
-  const canvas = document.getElementById('bg-canvas');
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let mouse = { x: -1000, y: -1000 };
+  <!-- Experience -->
+  <section id="experience">
+    <div class="section-label">Where I've Worked</div>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
 
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
+      <!-- TikTok -->
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company-badge">
+              <span class="company-logo logo-tiktok">TT</span>
+              <span class="exp-company">TikTok</span>
+              <span style="color:var(--muted);font-size:0.85rem;margin-left:0.25rem">· NYC</span>
+            </div>
+            <span class="exp-period">Dec 2023 – Present</span>
+          </div>
+          <div class="exp-role">Software Engineer – Infra Platforms</div>
+          <ul class="exp-bullets">
+            <li>Architected and enhanced TikTok's datacenter infrastructure &amp; supply chain management platforms,
+              powering global planning, procurement, and sourcing workflows using Golang, Java, MySQL, Kafka, Redis, and
+              Elasticsearch.</li>
+            <li>Designed a high-throughput distributed monitoring system processing <strong>50K+ logs/sec</strong> using
+              Kafka and Go goroutines with worker pools and backpressure mechanisms.</li>
+            <li>Led full-stack mobile procurement platform for senior leadership with React + Golang; integrated SSO
+              &amp; JWT auth — <strong>60% productivity boost</strong>.</li>
+            <li>Built CDC pipelines (RDS binlog → Kafka → Protobuf) enabling zero-downtime cutovers and boosting data
+              migration efficiency by <strong>80%</strong>.</li>
+            <li>Applied LLM techniques (RAG, MCP) to accelerate engineering workflows and developer productivity across
+              teams.</li>
+          </ul>
+        </div>
+      </div>
 
-  window.addEventListener('resize', resize);
-  resize();
+      <!-- Citibank -->
+      <div class="exp-item reveal reveal-delay-1">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company-badge">
+              <span class="company-logo logo-citi">C</span>
+              <span class="exp-company">Citibank</span>
+              <span style="color:var(--muted);font-size:0.85rem;margin-left:0.25rem">· NYC</span>
+            </div>
+            <span class="exp-period">Feb 2023 – Dec 2023</span>
+          </div>
+          <div class="exp-role">Senior Java Engineer</div>
+          <ul class="exp-bullets">
+            <li>Developed backend services and frontend features for internal auditing systems using Java and Spring
+              Boot, improving system maintainability and reliability at scale.</li>
+          </ul>
+        </div>
+      </div>
 
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.vx = (Math.random() - 0.5) * 0.3;
-      this.vy = (Math.random() - 0.5) * 0.3;
-      this.r = Math.random() * 1.5 + 0.5;
-      this.alpha = Math.random() * 0.4 + 0.1;
-      this.color = Math.random() > 0.5 ? '56,189,248' : '129,140,248';
+      <!-- Meta -->
+      <div class="exp-item reveal reveal-delay-2">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company-badge">
+              <span class="company-logo logo-meta">M</span>
+              <span class="exp-company">Meta</span>
+              <span style="color:var(--muted);font-size:0.85rem;margin-left:0.25rem">· NYC</span>
+            </div>
+            <span class="exp-period">May 2022 – Feb 2023</span>
+          </div>
+          <div class="exp-role">Software Engineer</div>
+          <ul class="exp-bullets">
+            <li>Led feature development on Meta Business Suite — <strong>50% improvement</strong> in creator acquisition
+              through enhanced UX and platform performance.</li>
+            <li>Designed and built the Reels Insights GraphAPI with React, Relay, GraphQL, and Ent Framework; enabling
+              3rd-party developer access to advanced analytics.</li>
+            <li>Built executive-facing Reels Insights API monitoring dashboards using Hive, Apache Spark, Presto, and
+              Scuba to surface usage patterns for leadership.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gartner -->
+      <div class="exp-item reveal reveal-delay-3">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company-badge">
+              <span class="company-logo logo-gartner">G</span>
+              <span class="exp-company">Gartner</span>
+              <span style="color:var(--muted);font-size:0.85rem;margin-left:0.25rem">· Stamford</span>
+            </div>
+            <span class="exp-period">Sep 2019 – Apr 2022</span>
+          </div>
+          <div class="exp-role">Software Engineer</div>
+          <ul class="exp-bullets">
+            <li>Architected an advanced user tracking and analytics tool with Elasticsearch — <strong>60%
+                improvement</strong> in backend response performance.</li>
+            <li>Led backend design for LinkedIn API integration via OAuth 2.0, enabling automated posting and
+              dramatically improving social media platform recognition.</li>
+            <li>Designed and implemented AWS Lambda functions, enhancing backend efficiency and reducing endpoint
+              latency.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="section-label">Academic Background</div>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-degree">M.S. in Computer Science</div>
+        <div class="edu-school">University of Minnesota</div>
+        <div class="edu-period">Aug 2017 – Jul 2019</div>
+      </div>
+      <div class="edu-card reveal reveal-delay-1">
+        <div class="edu-degree">B.S. in Computer Science</div>
+        <div class="edu-school">University of Minnesota</div>
+        <div class="edu-period">Aug 2014 – Dec 2016</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule">
+    <div class="section-label">Book a Call</div>
+    <h2 class="section-title">Schedule a Meeting</h2>
+    <div class="schedule-layout reveal">
+
+      <!-- Info panel -->
+      <div class="schedule-info">
+        <div class="info-item">
+          <div class="info-icon">📅</div>
+          <div>
+            <div class="info-label">Duration</div>
+            <div class="info-value">30 or 60 minutes</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div>
+            <div class="info-label">Availability</div>
+            <div class="info-value">Mon – Fri, 9 AM – 6 PM ET</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Location</div>
+            <div class="info-value">Google Meet (link sent via invite)</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <div class="info-label">Confirmation</div>
+            <div class="info-value">Calendar invite sent to your email</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="schedule-card">
+        <form id="schedule-form" novalidate>
+          <div class="schedule-grid">
+            <div class="form-group">
+              <label for="s-name">Your Name</label>
+              <input type="text" id="s-name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="s-email">Your Email</label>
+              <input type="email" id="s-email" placeholder="jane@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="s-date">Preferred Date</label>
+              <input type="date" id="s-date" required />
+            </div>
+            <div class="form-group">
+              <label for="s-time">Preferred Time (ET)</label>
+              <input type="time" id="s-time" required />
+            </div>
+            <div class="form-group">
+              <label for="s-duration">Duration</label>
+              <select id="s-duration">
+                <option value="30">30 minutes</option>
+                <option value="60" selected>60 minutes</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="s-topic">Topic</label>
+              <input type="text" id="s-topic" placeholder="e.g. Engineering role, collaboration…" />
+            </div>
+            <div class="form-group full-width">
+              <label for="s-message">Message (optional)</label>
+              <textarea id="s-message" placeholder="Anything you'd like me to know beforehand…"></textarea>
+            </div>
+          </div>
+          <div style="margin-top:1.25rem">
+            <button type="submit" class="btn btn-primary" id="schedule-btn" style="width:100%;justify-content:center;font-size:1rem;padding:0.9rem">
+              <span id="schedule-btn-text">Request Meeting →</span>
+            </button>
+          </div>
+          <div id="schedule-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-label">Let's Connect</div>
+    <h2 class="section-title" style="margin-bottom:0">Get in Touch</h2>
+    <div class="contact-card reveal" style="margin-top:2rem">
+      <div class="contact-glow"></div>
+      <p style="color:var(--muted);font-size:1rem;max-width:400px;margin:0 auto">
+        I'm always open to discussing distributed systems, infrastructure at scale, or new opportunities.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:bowen4091761@gmail.com" class="contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          bowen4091761@gmail.com
+        </a>
+        <a href="tel:218-409-1761" class="contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z" />
+          </svg>
+          218-409-1761
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Bo Wen · Built with care and a little 🔥</p>
+  </footer>
+
+  <script>
+    /* ── Particle Canvas ────────────────────────────────── */
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouse = { x: -1000, y: -1000 };
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      const dx = this.x - mouse.x;
-      const dy = this.y - mouse.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 80) {
-        this.x += dx / dist * 0.8;
-        this.y += dy / dist * 0.8;
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3;
+        this.r = Math.random() * 1.5 + 0.5;
+        this.alpha = Math.random() * 0.4 + 0.1;
+        this.color = Math.random() > 0.5 ? '56,189,248' : '129,140,248';
       }
-      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        const dx = this.x - mouse.x;
+        const dy = this.y - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 80) {
+          this.x += dx / dist * 0.8;
+          this.y += dy / dist * 0.8;
+        }
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${this.color},${this.alpha})`;
+        ctx.fill();
+      }
     }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${this.color},${this.alpha})`;
-      ctx.fill();
-    }
-  }
 
-  for (let i = 0; i < 120; i++) particles.push(new Particle());
+    for (let i = 0; i < 120; i++) particles.push(new Particle());
 
-  function drawConnections() {
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 100) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(56,189,248,${0.06 * (1 - d / 100)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
+    function drawConnections() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(56,189,248,${0.06 * (1 - d / 100)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
         }
       }
     }
-  }
 
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    drawConnections();
-    requestAnimationFrame(animate);
-  }
-  animate();
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      drawConnections();
+      requestAnimationFrame(animate);
+    }
+    animate();
 
-  document.addEventListener('mousemove', e => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY + window.scrollY;
-  });
-
-  /* ── Scroll reveal ──────────────────────────────────── */
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
-
-  /* ── Navbar scroll shadow ───────────────────────────── */
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').style.boxShadow =
-      window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.4)' : '';
-  });
-
-  /* ── Counter animation ──────────────────────────────── */
-  function animateCounters() {
-    document.querySelectorAll('.stat-num').forEach(el => {
-      const span = el.querySelector('span');
-      if (!span) return;
-      const target = span.textContent.replace(/\D/g, '');
-      if (!target) return;
-      const suffix = span.textContent.replace(/[\d]/g, '');
-      let count = 0;
-      const end = parseInt(target, 10);
-      const step = Math.ceil(end / 40);
-      const timer = setInterval(() => {
-        count = Math.min(count + step, end);
-        span.textContent = count + suffix;
-        if (count >= end) clearInterval(timer);
-      }, 30);
+    document.addEventListener('mousemove', e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY + window.scrollY;
     });
-  }
 
-  const heroObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { animateCounters(); heroObserver.disconnect(); }});
-  }, { threshold: 0.5 });
-  heroObserver.observe(document.querySelector('.hero-stats'));
-</script>
+    /* ── Scroll reveal ──────────────────────────────────── */
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    /* ── Navbar scroll shadow ───────────────────────────── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').style.boxShadow =
+        window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.4)' : '';
+    });
+
+    /* ── Counter animation ──────────────────────────────── */
+    function animateCounters() {
+      document.querySelectorAll('.stat-num').forEach(el => {
+        const span = el.querySelector('span');
+        if (!span) return;
+        const target = span.textContent.replace(/\D/g, '');
+        if (!target) return;
+        const suffix = span.textContent.replace(/[\d]/g, '');
+        let count = 0;
+        const end = parseInt(target, 10);
+        const step = Math.ceil(end / 40);
+        const timer = setInterval(() => {
+          count = Math.min(count + step, end);
+          span.textContent = count + suffix;
+          if (count >= end) clearInterval(timer);
+        }, 30);
+      });
+    }
+
+    const heroObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { animateCounters(); heroObserver.disconnect(); } });
+    }, { threshold: 0.5 });
+    heroObserver.observe(document.querySelector('.hero-stats'));
+
+  /* ── Schedule form ──────────────────────────────────── */
+  // Paste your deployed Apps Script URL here after setup:
+  const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+
+  // Set date minimum to today
+  const dateInput = document.getElementById('s-date');
+  const today = new Date().toISOString().split('T')[0];
+  dateInput.setAttribute('min', today);
+
+  document.getElementById('schedule-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn = document.getElementById('schedule-btn');
+    const btnText = document.getElementById('schedule-btn-text');
+    const status = document.getElementById('schedule-status');
+
+    const name = document.getElementById('s-name').value.trim();
+    const email = document.getElementById('s-email').value.trim();
+    const date = document.getElementById('s-date').value;
+    const time = document.getElementById('s-time').value;
+    const duration = document.getElementById('s-duration').value;
+    const topic = document.getElementById('s-topic').value.trim();
+    const message = document.getElementById('s-message').value.trim();
+
+    if (!name || !email || !date || !time) {
+      status.className = 'error';
+      status.textContent = 'Please fill in your name, email, date, and time.';
+      return;
+    }
+
+    btn.disabled = true;
+    btnText.textContent = 'Sending…';
+    status.className = '';
+    status.style.display = 'none';
+
+    try {
+      const res = await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify({ name, email, date, time, duration, topic, message }),
+      });
+      const data = await res.json();
+      if (data.status === 'ok') {
+        status.className = 'success';
+        status.textContent = '✓ Meeting request sent! Check your email for the calendar invite.';
+        this.reset();
+      } else {
+        throw new Error(data.error || 'Unknown error');
+      }
+    } catch (err) {
+      status.className = 'error';
+      status.textContent = '✗ Something went wrong. Please email me directly at bowen4091761@gmail.com.';
+    } finally {
+      btn.disabled = false;
+      btnText.textContent = 'Request Meeting →';
+    }
+  });
+  </script>
 </body>
+
 </html>
